@@ -16,6 +16,12 @@ public class PasswordValidation {
 		Scanner scanner = new Scanner(System.in);
 		String password = scanner.nextLine();
 		
+		if (password.length() >= 7 ) {
+			System.out.println("Password valid and accepted");
+		} else {
+			System.out.println("Error");
+		}
+		
 		
 			
 
