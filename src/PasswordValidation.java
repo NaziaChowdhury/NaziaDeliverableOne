@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class PasswordValidation {
 
@@ -11,6 +12,11 @@ public class PasswordValidation {
 				+ "○ At least minimum 7 characters\n"
 				+ "○ At least maximum 12 characters\n"
 				+ "○ An exclamation point: !");
+		
+		Scanner scanner = new Scanner(System.in);
+		String password = scanner.nextLine();
+		
+		
 			
 
 	}
