@@ -12,7 +12,7 @@ public class PasswordValidation {
 		Scanner scanner = new Scanner(System.in);
 		String password = scanner.nextLine();
 
-		if (password.length() >= 7 && password.length() <= 12) {
+		if (password.length() >= 7 && password.length() <= 12 && password.contains("!")) {
 			System.out.println("Password valid and accepted");
 		} else {
 			System.out.println("Error");
