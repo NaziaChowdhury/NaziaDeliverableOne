@@ -12,12 +12,41 @@ public class PasswordValidation {
 		Scanner scanner = new Scanner(System.in);
 		String password = scanner.nextLine();
 
-		if (password.length() >= 7 && password.length() <= 12 && password.contains("!")) {
+		if (password.length() >= 7 && password.length() <= 12 && password.contains("!") && passwordContainsLowerAndUpperCase(password)) {
 			System.out.println("Password valid and accepted");
 		} else {
 			System.out.println("Error");
 		}
 
+	}
+
+	public static boolean passwordContainsLowerAndUpperCase(String password) {
+		boolean containsLowerCase = false;
+		boolean containsUpperCase = false;
+
+		for (int i = 0; i < password.length(); i++) {
+
+			char character = password.charAt(i);
+
+			if (Character.isLowerCase(character)) {
+				containsLowerCase = true;
+			}
+
+			if (Character.isUpperCase(character)) {
+				containsUpperCase = true;
+			}
+			
+			if (containsLowerCase && containsUpperCase) {
+				break;
+			}
+
+		}
+
+		if (containsLowerCase && containsUpperCase) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }
